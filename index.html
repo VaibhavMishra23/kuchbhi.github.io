@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="style.css" alt="css\style.css">
+<style>
+    *{
+       margin:0px;
+       padding:0px; 
+    }
+    #navbar {
+        display:flex;        
+    }
+    #logo{
+        margin: 10px 36px;
+    }
+    #logo img{
+        filter: invert(100%);
+        width: 80px;
+        height: 80px;
+        margin :10px 36px;
+    }
+    #navbar ul{
+        display: flex;
+    }
+    #navbar ul li{
+        list-style: none;
+        font-size: 18px;
+        /* color: white; */
+    }
+    #navbar ul li a{
+        display:block;
+        color: white;
+        padding: 18px 22px ;
+        border-radius: 20px; 
+        text-decoration: none;
+    }
+    #navbar ul{
+        display:flex;
+        z-index: 1;
+    }
+    #navbar::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        height:100%;
+        width: 100%;
+        z-index: 0;
+        opacity: 0.4;
+    }
+    #navbar ul li a:hover{
+        color:black;
+        background-color: white;
+    }
+    #navbar{
+        position:relative;
+    }
+    #home{
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 367px;
+        justify-content: center;
+        align-items: center;
+    }
+    #home::before{
+        content: "";
+        position:absolute;
+        background: url('https://cdn.pixabay.com/photo/2021/06/03/01/54/spices-6305702__340.jpg')no-repeat center center/cover;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+        opacity: 0.89;
+    }
+    #home h1{
+        color: white;
+        text-align: center;
+    }
+    #home p{
+        color: white;
+        text-align: center;
+    }
+    .hprimary{
+        font-size: 2.8rem;
+        padding: 12px;
+    }
+    .btn{
+        color: white;
+        background-color: brown;
+        padding: 6px 20px;
+        border-radius: 8px;
+        margin: 17px;
+        border: 2px solid white;
+    }
+    /*service center*/
+    .pizza{
+        margin: 30px 0px;
+    }
+    .services{
+        display: inline-block;
+        border: 2px solid red;
+        background-color: cornsilk;
+        box-shadow: 10px 13px red;
+        width: 33%;
+        height: 50%;
+        margin: 5px 5px;
+    }
+    .pizza img{
+        display: block;
+        width:90px;
+        height: 90px;
+        margin: 12px auto;
+    }
+    .ram{
+        display: flex;
+    }
+    .pizza h2{
+        text-align: center;
+    }
+    .ourservice{
+        text-align: center;
+        font-size: 44px;
+        margin: 12px 12px;
+    }
+    #images{
+        display:flex;
+    }  
+    .size{
+        display: flex;
+        width: 75px;
+        height: 75px;
+        margin:12px auto;
+            }
+    .ourclients{
+        text-align: center;
+        margin: 23px;
+    }
+    #cli::before{
+        content: "";
+        position: absolute;
+        background: url('https://cdn.pixabay.com/photo/2017/06/06/22/46/mediterranean-cuisine-2378758__340.jpg') no-repeat center center/cover;
+        width: 100%;
+        height: 22%;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    .container::before{
+        content: "";
+        position: absolute;
+        background:url('https://media.istockphoto.com/photos/phone-and-email-icons-on-wooden-cubes-with-contact-us-text-on-blue-picture-id1271752802?b=1&k=20&m=1271752802&s=170667a&w=0&h=sMEPVY49FAy2UHkhyQLWDHlAhYsR2F2NDkNlSEteO3s=');
+        width: 100%;
+        height: 30%;
+        z-index: -1;
+        opacity: 0.8;
+    }
+    .container h1{
+        text-align: center;
+        font-size: 33px;
+        font-weight: bold;
+        color: white;
+    }
+    .form-group input{
+            text-align: center;
+            display: block;
+            width: 310px;
+            padding: 1px;
+            border: 2px solid black;
+            margin: 11px auto;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+    .container button{
+            display: block;
+            width: 20%;
+            margin: auto;
+        }
+</style>
+<body>
+    <nav id="navbar">
+    <div id="logo">
+        <img src="https://cdn.pixabay.com/photo/2017/10/23/17/43/eagle-2881818__340.png" alt="Mynextmeal.com">
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contect Us</a></li>
+    </ul>
+    </nav>
+    <section id="home">
+        <h1 class="hprimary">Welcome to MyOnlineMeal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias enim reiciendis facilis minus in recusandae quasi nemo soluta dignissimos officia </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus facere quam illum facilis quia! Inventore vero, sint tenetur iusto eligendi possimus </p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section class="pizza">
+        <h1 class="ourservice">Our service</h1>
+        <ram class="ram">
+        <div class="services">
+        <img src="https://img.freepik.com/free-vector/colorful-round-tasty-pizza_1284-10219.jpg?w=740&t=st=1667899263~exp=1667899863~hmac=508892de75e6b356c149d93e20f22086bb0b298379e59179fbae70840a122c93" alt="">
+            <h2 class="h-secondary center">Food Ordering</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aperiam dolores deserunt amet odio,Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quibusdam unde quia reprehenderit eos distinctio amet, necessitatibus possimus ad eum minima officiis quae similique praesentium obcaecati cum id sit mollitia!</p>
+            </div>
+        <div class="services">
+            <img src="https://www.freepnglogos.com/uploads/food-png/beer-food-the-portsmouth-brewery-26.png" alt="">
+            <h2 class="h-secondary center">Catering</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aperiam dolores deserunt amet odio,Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quibusdam unde quia reprehenderit eos distinctio amet, necessitatibus possimus ad eum minima officiis quae similique praesentium obcaecati cum id sit mollitia!</p>
+            </div> 
+            <div class="services">
+            <img  src="https://img.freepik.com/free-vector/colorful-round-tasty-pizza_1284-10219.jpg?w=740&t=st=1667899263~exp=1667899863~hmac=508892de75e6b356c149d93e20f22086bb0b298379e59179fbae70840a122c93" alt="">
+            <h2 class="h-secondary center">Food Ordering</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aperiam dolores deserunt amet odio,Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, quibusdam unde quia reprehenderit eos distinctio amet, necessitatibus possimus ad eum minima officiis quae similique praesentium obcaecati cum id sit mollitia!</p>
+            </div>
+        </ram>
+    </section>
+    <client id="cli">
+        <h1 class="ourclients">Our Clients</h1>
+        <div id="images">
+        <img class="size" src="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-what-you-need-know-before-rebranding-11.png" alt="APPLE">
+        <img class="size" src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg" alt="intagram">
+        <img class="size" src="https://cdn.pixabay.com/photo/2017/03/24/07/28/twitter-2170426__340.png" alt="twiter">
+        <img class="size" src="https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751__340.png" alt="Google">
+        </div>
+    </client>
+    <div class="container">
+        <h1>Contact US</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div> 
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email ID">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Address">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+        </div>
+</body>
+</html>
